@@ -1,0 +1,4 @@
+# general
+
+alias c='clear'
+alias reload='source  ~/.zshrc'
