@@ -5,16 +5,16 @@ set $mod Mod4
 set $alt Mod1
 
 ## Workspaces
-set $ws1  "󰆍 Terminal"
-set $ws2  "󰲋 Dev"
-set $ws3  "󰈹 Browser"
-set $ws4  "󰎆 Music"
-set $ws5  "󰉋 Files"
-set $ws6  "󰭹 Chat"
-set $ws7  "󰇮 Email"
-set $ws8  "󰈙 Notes"
-set $ws9  "󰆼 Database"
-set $ws10 "󰙳 Misc"
+set $ws1  "1:󰆍 Terminal"
+set $ws2  "2:󰲋 Dev"
+set $ws3  "3:󰈹 Browser"
+set $ws4  "4:󰎆 Music"
+set $ws5  "5:󰉋 Files"
+set $ws6  "6:󰭹 Chat"
+set $ws7  "7:󰇮 Email"
+set $ws8  "8:󰈙 Notes"
+set $ws9  "9:󰆼 Database"
+set $ws10 "10:󰙳 Misc"
 
 ## Font
 font pango:JetBrains Mono Medium 10
@@ -39,9 +39,9 @@ assign [class="jetbrains-phpstorm"] $ws2
 assign [class="firefox"]            $ws3
 assign [class="Spotify"]            $ws4
 assign [class="Thunar"]             $ws5
-assign [class="rocket.chat"]        $ws6
-assign [class="thunderbird"]        $ws7
-assign [class="obsidian"]           $ws8
+assign [class="Rocket.Chat"]        $ws6
+assign [class="Mailspring"]        $ws7
+assign [class="Logseq"]           $ws8
 assign [class="DBgate"]             $ws9
 
 
