@@ -22,7 +22,6 @@ font pango:JetBrains Mono Medium 10
 ## Gaps & Borders
 title_align center
 for_window [class=".*"] border pixel 2
-for_window [class=".*"] move position 0 60
 gaps top 15
 gaps inner 10
 gaps outer 5
@@ -48,8 +47,8 @@ assign [class="DBgate"]             $ws9
 
 ## Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur
 exec --no-startup-id dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
@@ -89,7 +88,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+e exec --no-startup-id rofi -show power
 bindsym $mod+y exec alacritty -e yazi
-
+bindsym $mod+Ctrl+l exec betterlockscreen -l blur
 
 ## Media controls
 bindsym $mod+udiaeresis exec --no-startup-id playerctl --player=spotify play-pause
