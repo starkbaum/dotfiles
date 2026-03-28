@@ -60,6 +60,16 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+## Screenshots
+# Full screen to file
+bindsym $mod+Shift+f exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
+# Selection to clipboard
+bindsym $mod+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
+# Full screen to clipboard
+bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
+# Selection to file
+bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
+
 ## Navigation keys
 set $up l
 set $down k
