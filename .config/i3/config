@@ -64,11 +64,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Full screen to file
 bindsym $mod+Shift+f exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
 # Selection to clipboard
-bindsym $mod+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/screenshot-select.sh
 # Full screen to clipboard
 bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
 # Selection to file
-bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
+bindsym Shift+Print exec --no-startup-id ~/.config/i3/scripts/screenshot-select.sh
 
 ## Navigation keys
 set $up l
@@ -86,6 +86,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+e exec --no-startup-id rofi -show power
+
+## Media controls
+bindsym $mod+udiaeresis exec --no-startup-id playerctl --player=spotify play-pause
+bindsym $mod+odiaeresis exec --no-startup-id playerctl --player=spotify previous
+bindsym $mod+adiaeresis exec --no-startup-id playerctl --player=spotify next
 
 # Focus
 bindsym $mod+$left focus left
