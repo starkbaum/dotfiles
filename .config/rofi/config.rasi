@@ -1,12 +1,15 @@
 configuration {
-    modi: "drun,run,window";
+    modi: "drun,combi,window,power:~/.config/rofi/scripts/power.sh";
+    combi-modi: "window,drun";
     show-icons: true;
     icon-theme: "Papirus-Dark";
-    font: "JetBrains Mono Medium 11";
+    font: "FiraCode Nerd Font 11";
     drun-display-format: "{name}";
-    display-drun: " Apps";
-    display-run: " Run";
-    display-window: " Windows";
+    display-drun: "󰣖 Apps";
+    display-combi: "󰍉 Search";
+    display-window: "󱂬 Windows";
+    display-power: "󰐥 Power";
+    combi-hide-mode-prefix: false;
 }
 
 @theme "style"
