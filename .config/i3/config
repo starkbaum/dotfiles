@@ -1,10 +1,10 @@
 # i3 config file (v4)
 
-##-- Mod & Variables ----------------------
+## Mod & Variables
 set $mod Mod4
 set $alt Mod1
 
-##-- Workspaces ---------------------------
+## Workspaces
 set $ws1  "󰆍 Terminal"
 set $ws2  "󰲋 Dev"
 set $ws3  "󰈹 Browser"
@@ -16,10 +16,10 @@ set $ws8  "󰈙 Notes"
 set $ws9  "󰆼 Database"
 set $ws10 "󰙳 Misc"
 
-##-- Font ---------------------------------
+## Font
 font pango:JetBrains Mono Medium 10
 
-##-- Gaps & Borders -----------------------
+## Gaps & Borders
 title_align center
 for_window [class=".*"] border pixel 2
 gaps top 15
@@ -27,13 +27,13 @@ gaps inner 10
 gaps outer 5
 smart_borders on
 
-##-- Colors (Catppuccin Macchiato) --------
+## Colors (Catppuccin Macchiato)
 client.focused          #A6E3A1 #24273A #CAD3F5 #A6E3A1 #A6E3A1
 client.focused_inactive #363A4F #24273A #CAD3F5 #363A4F #363A4F
 client.unfocused        #1E2030 #1E2030 #8087A2 #1E2030 #1E2030
 client.urgent           #ED8796 #ED8796 #24273A #ED8796 #ED8796
 
-##-- App Assignments ----------------------
+## App Assignments
 assign [class="Alacritty"]          $ws1
 assign [class="jetbrains-phpstorm"] $ws2
 assign [class="firefox"]            $ws3
@@ -44,32 +44,33 @@ assign [class="thunderbird"]        $ws7
 assign [class="obsidian"]           $ws8
 assign [class="DBgate"]             $ws9
 
-##-- Autostart ----------------------------
+## Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always --no-startup-id ~/.config/i3/scripts/wallpaper.sh
 
-##-- Volume -------------------------------
+## Volume
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-##-- Navigation keys ----------------------
+## Navigation keys
 set $up l
 set $down k
 set $left j
 set $right semicolon
 
-##-- Mouse --------------------------------
+## Mouse
 floating_modifier $mod
 tiling_drag modifier titlebar
 
-##-- Keybindings --------------------------
+## Keybindings
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -109,7 +110,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-##-- Workspaces ---------------------------
+## Workspaces
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -132,12 +133,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-##-- i3 control ---------------------------
+## i3 control
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-##-- Resize mode --------------------------
+## Resize mode
 mode "resize" {
         bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
