@@ -7,7 +7,6 @@
     accent:     #A6E3A1;
     urgent:     #ED8796;
     selected-fg: #1E2030;
-
     background-color: transparent;
     text-color: @fg;
 }
@@ -16,7 +15,7 @@ window {
     background-color: @bg;
     border: 2px solid;
     border-color: @accent;
-    border-radius: 12px;
+    border-radius: 0px;
     width: 560px;
 
 }
@@ -31,7 +30,7 @@ mainbox {
 imagebox {
     background-color: @bg-alt;
     background-image: url("~/Pictures/rofi/rofi_ban_gioc_waterfall_002.jpg", width);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 0px;
     height: 500px;
     children: [dummy, bottom-bar];
     orientation: vertical;
@@ -52,7 +51,7 @@ bottom-bar {
 
 inputbar {
     background-color: rgba(30,32,48,0.5);
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 8px 12px;
     spacing: 8px;
     children: [prompt, entry];
@@ -78,7 +77,7 @@ mode-switcher {
 
 button {
     background-color: rgba(30,32,48,0.5);
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 4px 14px;
     text-color: @fg-alt;
     cursor: pointer;
@@ -94,7 +93,7 @@ button selected {
 
 listview {
     background-color: transparent;
-    padding: 8px 12px;
+    padding: 8px 0px;
     lines: 7;
     scrollbar: false;
     spacing: 4px;
@@ -103,7 +102,7 @@ listview {
 
 element {
     background-color: transparent;
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 8px 12px;
     spacing: 8px;
     cursor: pointer;
@@ -115,10 +114,8 @@ element normal.normal {
 }
 
 element selected.normal {
-    background-color: transparent;
+    background-color: @accent;
     text-color: @fg;
-    border: 1px solid;
-    border-color: @accent;
 }
 
 element-icon {
