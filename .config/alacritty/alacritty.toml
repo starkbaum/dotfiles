@@ -1,0 +1,34 @@
+[window]
+padding = { x = 12, y = 12 }
+decorations = "none"
+opacity = 0.95
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+size = 11.0
+
+[colors.primary]
+background = "#24273A"
+foreground = "#CAD3F5"
+
+[colors.normal]
+black   = "#494D64"
+red     = "#ED8796"
+green   = "#A6E3A1"
+yellow  = "#EED49F"
+blue    = "#8AADF4"
+magenta = "#C6A0F6"
+cyan    = "#8BD5CA"
+white   = "#B8C0E0"
+
+[colors.bright]
+black   = "#5B6078"
+red     = "#ED8796"
+green   = "#A6E3A1"
+yellow  = "#EED49F"
+blue    = "#8AADF4"
+magenta = "#C6A0F6"
+cyan    = "#8BD5CA"
+white   = "#A5ADCB"

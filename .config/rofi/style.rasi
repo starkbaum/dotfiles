@@ -1,10 +1,10 @@
 * {
-    bg:         #1e2329;
-    bg-alt:     #272d35;
-    fg:         #d8e0ea;
-    fg-alt:     #546070;
-    accent:     #00ADB5;
-    urgent:     #e06c75;
+    bg:         #24273A;
+    bg-alt:     #1E2030;
+    fg:         #CAD3F5;
+    fg-alt:     #8087A2;
+    accent:     #A6E3A1;
+    urgent:     #ED8796;
 
     background-color: transparent;
     text-color: @fg;
@@ -59,7 +59,7 @@ element normal.normal {
 
 element selected.normal {
     background-color: @accent;
-    text-color: @bg;
+    text-color: #1E2030;
 }
 
 element-icon {
