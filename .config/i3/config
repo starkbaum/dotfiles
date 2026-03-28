@@ -64,11 +64,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 ## Screenshots
 # Full screen to file
-bindsym $mod+Shift+f exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
+bindsym $mod+Shift+Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send 'Screenshot' 'Saved to Pictures/Screenshots'
 # Selection to clipboard
 bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/screenshot-select.sh
 # Full screen to clipboard
-bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
+bindsym $mod+Shift+f exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send 'Screenshot' 'Copied to clipboard'
 # Selection to file
 bindsym Shift+Print exec --no-startup-id ~/.config/i3/scripts/screenshot-select.sh
 
