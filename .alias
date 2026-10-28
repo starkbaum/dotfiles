@@ -2,3 +2,20 @@
 
 alias c='clear'
 alias reload='source  ~/.zshrc'
+alias dotfiles:alias='vim ~/dotfiles/.alias'
+
+# laravel
+
+alias sail='./vendor/bin/sail'
+
+
+
+# directory navigation
+
+alias goto:code:fledermaus='cd ~/code/php/fledermaus-at'
+
+
+# directory projects
+
+alias project:code:fledermaus-at='cd ~/code/php/fledermaus-at'
+alias project:documents:fledermaus-at='cd ~/documents/projects/fledermaus-at'
