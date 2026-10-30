@@ -16,6 +16,18 @@ set $ws8  "8:󰈙 Notes"
 set $ws9  "9:󰆼 Database"
 set $ws10 "10:󰙳 Misc"
 
+## Workspaces auf Monitore verteilen
+workspace $ws1 output DP-5-2
+workspace $ws2 output DP-5-2
+workspace $ws3 output DP-5-1
+workspace $ws4 output eDP-1
+workspace $ws5 output eDP-1
+workspace $ws6 output DP-5-1
+workspace $ws7 output DP-5-1
+workspace $ws8 output DP-5-1
+workspace $ws9 output DP-5-1
+workspace $ws10 output DP-5-1
+
 ## Font
 font pango:JetBrains Mono Medium 10
 
@@ -89,6 +101,9 @@ bindsym $mod+Tab exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+e exec --no-startup-id rofi -show power
 bindsym $mod+y exec alacritty -e yazi
 bindsym $mod+Ctrl+l exec betterlockscreen -l blur
+# Monitor-Reset bei Blackout (Mod4 + Strg + R)
+bindsym $mod+Ctrl+r exec --no-startup-id xrandr --auto && sleep 1 && ~/.config/polybar/launch.sh
+
 
 ## Media controls
 bindsym $mod+udiaeresis exec --no-startup-id playerctl --player=spotify play-pause
@@ -173,3 +188,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+exec_always --no-startup-id xrandr --output eDP-1 --primary --mode 2560x1600 --rate 60.00 --pos 0x0 --rotate normal --output DP-5-1 --mode 1920x1080 --rate 60.00 --pos 2560x0 --rotate normal --output DP-5-2 --mode 1920x1080 --rate 60.00 --pos 4480x0 --rotate normal
+
