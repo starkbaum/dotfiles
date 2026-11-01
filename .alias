@@ -29,3 +29,6 @@ alias project:documents:fledermaus-at='cd ~/documents/projects/fledermaus-at'
 
 ## starkbaum-me
 alias project:code:starkbaum-me='cd ~/code/php/starkbaum-me'
+
+## educators-support
+alias project:educators-support:code='cd ~/code/php/educators-support'
